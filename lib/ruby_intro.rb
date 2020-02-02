@@ -1,5 +1,4 @@
 # When done, submit this entire file to the autograder.
-
 # Part 1
 
 def sum array
@@ -35,8 +34,8 @@ def hello(name)
   "Hello, "+name
 end
 
+
 def starts_with_consonant? s
-  s.downcase!
   if (/[aeiou]/ =~ s[0]) =~ nil
     return true
   else
@@ -45,7 +44,7 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  if s.count("01") ~= s.size
+  if s.count("01") != s.size
     return false
   elsif s.to_i(2)%4 == 0
     return true
@@ -64,11 +63,12 @@ class BookInStock
         @isbn = isbn
         @price = price
         
-	raise ArgumentError.new("empty isbn") if isbn.empty?
-	raise ArgumentError.new("price less than 0") if price <= 0 
-    end
-    
-    def price_as_string
-        "$"+sprintf("%.2f", @price)
-    end
+	    raise ArgumentError.new("empty isbn") if isbn.empty?
+		raise ArgumentError.new("price less than 0") if price <= 0 
+	end
+
+	def price_as_string
+		"$"+sprintf("%.2f", @price)
+	end
 end
+
