@@ -2,7 +2,7 @@
 
 # Part 1
 
-def sum arr
+def sum array
   if array.empty?
     return 0
   else
@@ -10,10 +10,10 @@ def sum arr
   end
 end
 
-def max_2_sum arr
+def max_2_sum array
   array.sort!
   if array.empty?
-    return o
+    return 0
   elsif array.count == 1
     return array[0]
   else 
